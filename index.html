@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DateTimePicker-Material</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-material-datetimepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/FezVrasta/bootstrap-material-design/master/dist/js/material.min.js"></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-material-datetimepicker.js"></script>
+</head>
+<body>
+    <h1>Referencia: <a target="_blank" href="http://t00rk.github.io/bootstrap-material-datetimepicker"><strong>"Bootstrap Material DatePicker"</strong></a></h1>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group ">
+                <div class="fg-line">
+                    <input type="text" id="date" class="form-control" placeholder="Fecha">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <div class="fg-line">
+                    <input type="text" id="time" class="form-control" placeholder="Hora">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#date').bootstrapMaterialDatePicker({
+            // format : 'DD/MM/YYYY HH:mm',
+            lang : 'es',
+            weekStart : 1,
+            cancelText : 'CANCELAR',
+            clearButton: false,
+            time: false,
+            // minDate : new Date(),
+            // maxDate : new Date(new Date().getTime()+(7*24*60*60*1000))
+        });
+        $('#time').bootstrapMaterialDatePicker({
+            date: false,
+            lang : 'es',
+            shortTime: false,
+            cancelText : 'CANCELAR',
+            format: 'HH:mm'
+        });
+    </script>
+</body>
+</html>
